@@ -1,0 +1,104 @@
+body {
+  background-color: beige;
+  padding: 0;
+  margin: 0;
+}
+
+.header{
+  background-color: darkblue;
+  height: 4rem;
+  padding: .5rem;
+  margin-bottom: .5rem;
+}
+
+.logo {
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#popForm {
+  padding: 1rem;
+}
+
+form {
+  padding: 20px;
+  display: none;
+}
+
+input {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  border-radius: .3rem;
+  border: 1px solid blue;
+  padding: .3rem;
+}
+
+input:focus {
+  outline: none !important;
+  border: 1px solid darkred;
+  box-shadow: 0 0 10px darkred;
+}
+
+input[type=submit] {
+  background-color: darkblue;
+  color: white;
+  padding: .3rem;
+  font-weight: 600;
+}
+
+label {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: 600;
+}
+
+.addbtn {
+  background-color: darkred;
+  color: white;
+  font-weight: 600;
+  border-radius: .5rem;
+  padding: .3rem 1rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: auto;
+  padding: .6rem;
+}
+
+.card {
+  background-color: white;
+  border: 3px solid darkred;
+  border-radius: 10px;
+  padding: .5rem;
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  position: relative;
+}
+
+.h3 {
+  font-weight: 500;
+}
+
+.readBtn {
+  background-color: darkred;
+  color: white;
+  border: 3px solid darkblue;
+  border-radius: .3rem;
+  font-weight: 600;
+  padding: .3rem .7rem;
+}
+
+.del {
+  background-color: transparent;
+  color: red;
+  border: none;
+  font-family: 'Permanent Marker', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
