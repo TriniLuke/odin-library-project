@@ -1,20 +1,4 @@
-const myLibrary = [
-  {
-    title: 'Where Did Time Go',
-    author: 'Linda Pascal',
-    pages: 300,
-  },
-  {
-    title: 'The Mamba Mentality: How I Play',
-    author: 'Kobe Bryant',
-    pages: 208,
-  },
-  {
-    title: 'To Kill a Mockingbird',
-    author: 'Harper Lee',
-    pages: 281,
-  },
-];
+const myLibrary = [];
 
 const form = document.getElementById('inputForm');
 const subBtn = document.getElementById('subBtn');
@@ -27,6 +11,7 @@ class Book {
   }
 }
 
+// add a book to the page and update the book array
 function addBookToPage() {
   const display = document.getElementById('wrapper');
   const cards = document.querySelectorAll('.card');
@@ -35,6 +20,7 @@ function addBookToPage() {
 }
 addBookToPage();
 
+// add a book to the library array
 function addBookToLibrary() {
   subBtn.addEventListener('click', (Event) => {
     Event.preventDefault();
@@ -45,7 +31,7 @@ function addBookToLibrary() {
     );
     myLibrary.push(newBook);
     addBookToPage();
-    form.reset();
+    form.reset(); // clear the form input fields
   });
 }
 addBookToLibrary();
@@ -86,6 +72,7 @@ function createBook(newBook) {
   del.innerText = 'X';
   del.classList.add('del');
 
+  // added thses event listner function here to make use of CLOSURE
   bookRead.addEventListener('click', () => {
     card.style.border = '3px solid green';
     bookRead.style.backgroundColor = 'blue';
@@ -100,6 +87,7 @@ function createBook(newBook) {
 
 const addBtn = document.getElementById('addBtn');
 
+// hide the input form
 addBtn.addEventListener('click', () => {
   if (form.style.display === 'block') {
     form.style.display = 'none';
