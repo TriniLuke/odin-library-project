@@ -95,3 +95,38 @@ addBtn.addEventListener('click', () => {
     form.style.display = 'block';
   }
 });
+
+// validate form
+function validateForm() {
+  const name = form.querySelector('#title');
+  const author = form.querySelector('#author');
+  const pages = form.querySelector('#pages');
+  const error = form.querySelector('#error');
+
+  // check all fields for value and validity
+  name.addEventListener('change', (e) => {
+    e.preventDefault();
+    if (!name.checkValidity()) {
+      error.innerText = name.validationMessage;
+    } else {
+      error.innerText = '';
+    }
+  });
+  author.addEventListener('change', (e) => {
+    e.preventDefault();
+    if (!author.checkValidity()) {
+      error.innerText = author.validationMessage;
+    } else {
+      error.innerText = '';
+    }
+  });
+  pages.addEventListener('change', (e) => {
+    e.preventDefault();
+    if (pages.validity.rangeUnderflow || pages.valueMissing) {
+      error.innerText = pages.validationMessage;
+    } else {
+      error.innerText = '';
+    }
+  });
+}
+validateForm();

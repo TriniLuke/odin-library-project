@@ -4,7 +4,7 @@ body {
   margin: 0;
 }
 
-.header{
+.header {
   background-color: darkblue;
   height: 4rem;
   padding: .5rem;
@@ -29,7 +29,7 @@ input {
   margin-top: 1rem;
   margin-right: 1rem;
   border-radius: .3rem;
-  border: 1px solid blue;
+  border: 2px solid blue;
   padding: .3rem;
 }
 
@@ -39,17 +39,33 @@ input:focus {
   box-shadow: 0 0 10px darkred;
 }
 
-input[type=submit] {
+button {
   background-color: darkblue;
   color: white;
   padding: .3rem;
   font-weight: 600;
+  border: 2px solid blue;
+  border-radius: .3rem;
+}
+
+input:valid {
+  border: 2px solid green;
+}
+
+input:invalid {
+  background-color: lightcoral;
+  border: 2px solid red;
 }
 
 label {
   position: absolute;
   font-family: Arial, Helvetica, sans-serif;
   font-size: small;
+  font-weight: 600;
+}
+
+.error-message {
+  color: red;
   font-weight: 600;
 }
 
