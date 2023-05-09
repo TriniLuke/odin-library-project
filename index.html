@@ -16,16 +16,16 @@
         <h1 class="logo">Odin Library Project</h1>
     </div>
     <div class="popForm" id="popForm">
-        <button type="button" id="addBtn" class="addbtn">Add Book</button>
+        <button type=" button" id="addBtn" class="addbtn">Add Book</button>
         <form id="inputForm" name="addBook">
             <label for="title">Title</label>
-            <input type="text" id="title" name="name" minlength="3" required>
+            <input type="text" id="title" name="name" minlength="4" required>
             <label for="author">Author</label>
-            <input type="text" id="author" name="author" minlength="2" required>
+            <input type="text" id="author" name="author" minlength="3" required>
             <label for="pages">Pages</label>
             <input type="number" id="pages" name="pages" min="25" required>
-            <button type="submit" form='inputForm' id="subBtn">Add</button>
-            <p class="error-message" id="error">Error</p>
+            <button type="submit" form="inputForm" id="subBtn">Add</button>
+            <p class="error-message" id="error"></p>
         </form>
     </div>
     <div class="wrapper" id="wrapper">
