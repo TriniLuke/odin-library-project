@@ -2,7 +2,6 @@ const myLibrary = [];
 
 const form = document.getElementById('inputForm');
 const subBtn = document.getElementById('subBtn');
-// const error = document.getElementById('error');
 
 class Book {
   constructor(title, author, pages) {
@@ -81,29 +80,12 @@ addBtn.addEventListener('click', () => {
   }
 });
 
-function addBookToLibrary() {
-  subBtn.addEventListener('click', (Event) => {
-    Event.preventDefault();
-    if (!validateTitle() || !validateAuthor() || !validatePages()) return false;
-
-    const newBook = new Book(
-      form.name.value,
-      form.author.value,
-      form.pages.value
-    );
-    myLibrary.push(newBook);
-    addBookToPage();
-    form.reset(); // clear the form input fields
-    return true;
-  });
-}
-addBookToLibrary();
-
 const title = document.getElementById('title');
 const author = document.getElementById('author');
 const pages = document.getElementById('pages');
 const error = document.getElementById('error');
 
+// validate information
 function validateTitle() {
   if (!title.checkValidity()) {
     error.textContent = 'Please enter a title';
@@ -130,3 +112,24 @@ function validatePages() {
   error.textContent = '';
   return true;
 }
+
+// add a new book to library array
+function addBookToLibrary() {
+  subBtn.addEventListener('click', (Event) => {
+    Event.preventDefault();
+    // calls validate functions for valid information
+    if (!validateTitle() || !validateAuthor() || !validatePages()) return false;
+
+    // create a new book with valid information
+    const newBook = new Book(
+      form.name.value,
+      form.author.value,
+      form.pages.value
+    );
+    myLibrary.push(newBook);
+    addBookToPage();
+    form.reset();
+    return true;
+  });
+}
+addBookToLibrary();
