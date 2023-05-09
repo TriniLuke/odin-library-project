@@ -56,7 +56,7 @@ function createBook(newBook) {
   del.innerText = 'X';
   del.classList.add('del');
 
-  // added thses event listner function here to make use of CLOSURE
+  // added thses event listener function here to make use of CLOSURE
   bookRead.addEventListener('click', () => {
     card.style.border = '3px solid green';
     bookRead.style.backgroundColor = 'blue';
